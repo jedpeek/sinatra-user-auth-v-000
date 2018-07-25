@@ -41,6 +41,7 @@ class ApplicationController < Sinatra::Base
     @user = User.find(session[:id])
     if @user == nil
       redirect to '/sessions/login'
+    end
     erb :'/users/home'
   end
 
